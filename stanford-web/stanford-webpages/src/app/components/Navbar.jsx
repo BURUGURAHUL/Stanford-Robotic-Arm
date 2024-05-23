@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div>
-        <Image className='hidden md:block md:visible' src={img1} width={190} height={190} />
+        <Image className='hidden lg:block lg:visible' src={img1} width={190} height={190} />
       </div>
     </div>
   );
