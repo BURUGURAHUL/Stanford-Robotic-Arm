@@ -21,7 +21,7 @@ export default function Home() {
                         </label>
                         <input
                             type="text"
-                            className="border-b-2 border-b border-black px-4 py-2 m-3 "
+                            className="border-b-2  border-black px-4 py-2 m-3 "
                             id="nameInput"
                             placeholder="Name"
                             value={name}
