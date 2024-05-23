@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.4.7"
+  }
+}

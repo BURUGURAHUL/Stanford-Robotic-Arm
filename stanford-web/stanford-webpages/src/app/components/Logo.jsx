@@ -11,10 +11,14 @@ const Logo = () => {
             height={45}
             alt="Logo"
         />
-        <div className='font-bold text-3xl leading-6 ml-2'>
-          Stanford<br/>
-          Manipulator  
+        <div><div className='font-bold text-3xl leading-6 ml-2 low-highlight'>
+          Stanford
         </div>
+
+        <div className='font-bold text-3xl leading-6 ml-2 low-highlight'>
+          Manipulator
+        </div></div>
+        
     </div>
   )
 }

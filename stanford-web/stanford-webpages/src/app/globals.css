@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.low-highlight {
+  background-image: linear-gradient(0, #c7f9cc, #c7f9cc);
+  background-size: 0% 55%; /* Change the initial size to 0 */
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s; /* Add transition for smooth effect */
+}
+
+.low-highlight:hover {
+  background-size: 100% 55%; /* Change size on hover */
+}
+
+h1{
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+h2{
+  font-size: x-large;
+  font-weight:600;
+}
+
+p{
+  font-size: large;
+}
+
+ul{
+  font-size: large;
+  list-style: disc;
+  margin: 2px 5%;
+}
