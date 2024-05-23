@@ -17,7 +17,7 @@ const Navbar = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
   const buttons = [
-    { text: 'Aim', link: '/' },
+    { text: 'Objective', link: '/' },
     { text: 'Theory', link: '/theory' },
     { text: 'Robotics Toolbox', link: '/rbtoolbox' },
     { text: 'Genetic Algorithm', link: '/geneticalgo' },

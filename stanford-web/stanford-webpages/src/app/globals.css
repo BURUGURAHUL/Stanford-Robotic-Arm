@@ -22,6 +22,8 @@ h1{
 }
 
 h2{
+  margin-top: 20px;
+  margin-bottom: 2px;
   font-size: x-large;
   font-weight:600;
 }
@@ -33,5 +35,6 @@ p{
 ul{
   font-size: large;
   list-style: disc;
-  margin: 2px 5%;
+  margin: 2px 2%;
+  margin-bottom: 10px;
 }
