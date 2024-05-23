@@ -16,8 +16,8 @@ const Card = ({name, imgpath, rollno, linkedin, github}) => {
       <Image src={imgpath} alt='' layout={'fill'}
               objectFit="cover" className='p-3 rounded-3xl'/>
       </div>
-      <h1 className='m-0  text-[25px]'>{name}</h1>
-      <h2 className='text-lg font-normal'>{rollno}</h2>
+      <h1 className='m-0 text-[25px] leading-6'>{name}</h1>
+      <h2 className='text-lg font-normal m-0'>{rollno}</h2>
       <div className='flex gap-4 justify-center mt-3'>
         <Link href={linkedin}>
             <Image src={linkedinlogo} width={40}/>
