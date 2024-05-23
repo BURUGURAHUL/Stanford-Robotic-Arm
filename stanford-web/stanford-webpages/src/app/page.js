@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <h1>1. Objective</h1>
-      <p>The optimization of robot manipulator's trajectory has become a popular topic in academic and industrial fields. We have implemented a method for minimizing the moving distance of robot manipulators. The inverse kinematics model is established with Denavit-Hartenberg method. </p>
+      <p>The optimization of robot manipulator&apos;s trajectory has become a popular topic in academic and industrial fields. We have implemented a method for minimizing the moving distance of robot manipulators. The inverse kinematics model is established with Denavit-Hartenberg method. </p>
       <p>Base on the initial posture matrix, the inverse kinematics model is used to find the initial state of each joint.  In accordance with the given beginning moment, cubic polynomial interpolation is applied to each joint variable and the positive kinematic model is used to calculate the moving distance of end effector. <br/>
       <br/>Genetic algorithm is used to optimize the sequential order of each joint and the time difference between different starting time of joints. Numerical applications involving a Stanford manipulator are presented. This project delves into the intricate workings of the Stanford manipulator, aiming to explore its kinematic models, control algorithms, and applications.
       </p>
@@ -18,7 +18,7 @@ export default function Home() {
         <li>A wrist</li>
         <li>An end effector</li>
       </ul>
-      <p><br/>Understanding the Stanford manipulator's design and functionality is crucial for advancing robotic applications in industrial, medical, and research settings. This project seeks to optimize the manipulator's trajectory using advanced algorithms, enhancing its efficiency and precision.</p>
+      <p><br/>Understanding the Stanford manipulator&apos;s design and functionality is crucial for advancing robotic applications in industrial, medical, and research settings. This project seeks to optimize the manipulator&apos;s trajectory using advanced algorithms, enhancing its efficiency and precision.</p>
     </div>
   );
 }

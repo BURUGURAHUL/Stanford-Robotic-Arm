@@ -20,11 +20,11 @@ const theory = () => {
       </ul> 
 
       <p><b>Mechanical Components:</b> Includes the structural parts like arms and joints, providing the physical capability to move and perform tasks.
-    <br/><b>Electronic Components:</b> Consist of motors, sensors, and control systems that drive and regulate the manipulator's movements.</p>
+    <br/><b>Electronic Components:</b> Consist of motors, sensors, and control systems that drive and regulate the manipulator&apos;s movements.</p>
       <h2>2.3 Basic Operational Principles</h2>
       <p>The manipulator has six degrees of freedom, allowing it to move in three translational and three rotational directions.</p>
       <Image src={fig1} width={500} className='mt-3 mx-auto'/>
-      <p><b>Forward kinematics</b> involves calculating the position and orientation of the end effector based on given joint parameters. It uses the Denavit-Hartenberg (D-H) parameters to systematically describe the robot's geometry.</p>
+      <p><b>Forward kinematics</b> involves calculating the position and orientation of the end effector based on given joint parameters. It uses the Denavit-Hartenberg (D-H) parameters to systematically describe the robot&apos;s geometry.</p>
       <br/><p><b>Inverse kinematics</b> determines the joint parameters needed to achieve a desired position and orientation of the end effector. </p>
       <br/><p><b>Control Mechanisms:</b></p>
       <ul>
