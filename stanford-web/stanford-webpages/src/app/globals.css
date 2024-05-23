@@ -35,6 +35,29 @@ p{
 ul{
   font-size: large;
   list-style: disc;
-  margin: 2px 2%;
+  margin: 2px 5%;
   margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 2px solid #d1d5db; /* Tailwind gray-300 */
+  text-align: left;
+}
+
+th {
+  color: #4b5563; /* Tailwind gray-600 */
+}
+
+tr:hover {
+  background-color: #48C063; /* Tailwind gray-100 */
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
 }

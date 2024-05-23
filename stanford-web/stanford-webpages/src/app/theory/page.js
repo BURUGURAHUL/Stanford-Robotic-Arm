@@ -23,7 +23,7 @@ const theory = () => {
     <br/><b>Electronic Components:</b> Consist of motors, sensors, and control systems that drive and regulate the manipulator&apos;s movements.</p>
       <h2>2.3 Basic Operational Principles</h2>
       <p>The manipulator has six degrees of freedom, allowing it to move in three translational and three rotational directions.</p>
-      <Image src={fig1} width={500} className='mt-3 mx-auto'/>
+      <Image src={fig1} width={400} className='m-5 mx-auto border-2 border-black rounded-xl'/>
       <p><b>Forward kinematics</b> involves calculating the position and orientation of the end effector based on given joint parameters. It uses the Denavit-Hartenberg (D-H) parameters to systematically describe the robot&apos;s geometry.</p>
       <br/><p><b>Inverse kinematics</b> determines the joint parameters needed to achieve a desired position and orientation of the end effector. </p>
       <br/><p><b>Control Mechanisms:</b></p>

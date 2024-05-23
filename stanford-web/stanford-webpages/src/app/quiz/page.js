@@ -8,21 +8,22 @@ export default function Home() {
  
     return (
         <div className="">
-            <h1>Test</h1>
+            <h1>Quiz</h1>
  
             {quizStarted ? (
                 <Quiz name={name} />
             ) : (
                 <>
-                    <div className="mb-3">
+                    <div className="mb-3 ">
                         <label htmlFor="nameInput"
-                            className="form-label">
+                            className="text-xl">
                             Enter Your Name:
                         </label>
                         <input
                             type="text"
-                            className="border-2 border-black"
+                            className="border-b-2 border-b border-black px-4 py-2 m-3 "
                             id="nameInput"
+                            placeholder="Name"
                             value={name}
                             onChange={(e) =>
                                 setName(e.target.value)}
@@ -30,7 +31,7 @@ export default function Home() {
                     </div>
                     <button
                         onClick={() => setQuizStarted(true)}
-                        className="btn btn-primary"
+                        className="text-white rounded-lg text-lg px-3 py-2 transition ease-in-out delay-150 bg-[#263238] hover:-translate-y-1 hover:scale-110 hover:bg-[#48C063] duration-300"
                         // Disable button if name is empty or whitespace
                         disabled={!name.trim()}
                     >

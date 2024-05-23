@@ -49,39 +49,35 @@ const Quiz = ({ name }) => {
     };
  
     return (
-        <div className='container mt-5'>
+        <div className='mt-5 text-white'>
  
             <div>
                 {!showResults ? (
-                    <div className='card p-4'>
-                        <h4>{question}</h4>
-                        <ul className='list-group'>
+                    <div className='rounded-xl p-4 md:p-6 bg-[#263238] shadow-lg'>
+                        Question {currentQuestionIndex + 1}/{questions.length}
+                        <h1 className='mt-0 text-xl md:text-2xl'>{question}</h1>
                             {answers.map((answer, idx) => (
-                                <li
+                                <p
                                     key={idx}
                                     onClick={() => onAnswerSelected(answer,idx)}
                                     className={
-                                        'list-group-item ' +
                                         (selectedAnswerIndex === 
-                                                idx ? 'active' : '') +
-                                        ' cursor-pointer'
+                                                idx ? 'bg-[#48C063] text-bold' : '') +
+                                        'cursor-pointer p-2 rounded-md'
                                     }
                                 >
                                     {answer}
-                                </li>
+                                </p>
                             ))}
-                        </ul>
-                        <div className='d-flex justify-content-between mt-3'>
-                            <b>Question
-                                {currentQuestionIndex + 1}/{questions.length}
-                            </b>
+                        
+                        <div className='flex justify-end m-3'>
+                            
                             <button
                                 onClick={handleNextQuestion}
-                                className='btn btn-primary'
+                                className='text-white rounded-lg text-lg px-3 py-2 transition ease-in-out delay-150 bg-[#263238] hover:-translate-y-1 hover:scale-110 hover:bg-[#48C063] duration-300'
                                 disabled={!answerChecked}
                             >
-                                {currentQuestionIndex === questions.length - 1 ?
-                                    'Submit' : 'Next Question'}
+                                <h1 className='text-xl m-0'>{currentQuestionIndex === questions.length - 1 ? 'Submit ✅' : 'Next Question ⏭️'}</h1>
                             </button>
                         </div>
                     </div>
