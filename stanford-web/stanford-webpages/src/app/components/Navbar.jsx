@@ -21,7 +21,7 @@ const Navbar = () => {
     { text: 'Theory', link: '/theory' },
     { text: 'Robotics Toolbox', link: '/rbtoolbox' },
     { text: 'Genetic Algorithm', link: '/geneticalgo' },
-    { text: 'Simulation', link: '/simulator' },
+    { text: 'Simulation', link: '/index.html' },
     { text: 'Quiz', link: '/quiz' },
     { text: 'Contributors', link: '/contributors' },
     { text: 'References', link: '/references' },
