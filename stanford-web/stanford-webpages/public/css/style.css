@@ -1,56 +1,27 @@
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: hsl(0, 0%, 0%);
-  color: white;
-}
-
-header {
-  background-color: #333;
-  padding: 1em 0;
-  text-align: center;
-  color: white;
-}
-
-header h1 {
-  font-size: 2em;
-  font-weight: 900;
-}
-
-nav {
-  background-color: #444;
-  padding: 1em;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 1em;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #simulation-frame {
   position: absolute;
-  width: 75%;
+  width: 80%;
   height: 80vh;
   margin: 2% auto;
-  border: 2px solid #fff;
-  background-image: url("https://www.shutterstock.com/image-photo/abstract-blurred-background-image-factory-600nw-462907885.jpg");
+  border: 2px solid black;
+  background-color: white;
   border-radius: 8px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
+
+
+}
+
+h1{
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 2rem;
 }
 
 #container3D {
@@ -88,4 +59,33 @@ nav ul li a {
 .slider {
   width: calc(100% - 20px); /* Adjust width to accommodate padding */
   margin-bottom: 10px; /* Adjust spacing between sliders */
+}
+
+.button{
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.125rem;/* 18px */;
+  line-height: 1.75rem;
+  background-color: #263238;
+  transition: all 0.25s ease-in-out 0.15s;
+}
+
+.button:hover {
+  transform: translateY(-0.25rem) scale(1.1); /* hover:-translate-y-1 hover:scale-110 */
+  background-color: #48C063; /* hover:bg-[#48C063] */
+}
+
+main{
+  margin: 0% 5%;
+}
+
+footer{
+    background-color: #191d1e; /* bg-[#191d1e] */
+    color: white; /* text-white */
+    text-align: center; /* text-center */
+    padding: 1.25rem; /* p-5 */
+    margin-top: 2.5rem; /* mt-10 */
+
+  
 }
