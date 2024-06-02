@@ -9,7 +9,7 @@ function MobileDrawer({ isOpen, onClose }) {
     { text: 'Theory', link: '/theory' },
     { text: 'Robotics Toolbox', link: '/rbtoolbox' },
     { text: 'Genetic Algorithm', link: '/geneticalgo' },
-    { text: 'Simulation', link: '/simulator' },
+    { text: 'Simulation', link: '/index.html' },
     { text: 'Test', link: '/test' },
     { text: 'Contributors', link: '/contributors' },
     { text: 'References', link: '/references' },
