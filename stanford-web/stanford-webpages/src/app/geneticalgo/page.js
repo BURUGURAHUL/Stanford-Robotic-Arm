@@ -8,12 +8,12 @@ const GeneticAlgo = () => {
       <p>
         Genetic algorithm is used to optimize the trajectory of a Stanford
         manipulator. The objective is to minimize the movement distance of the
-        manipulator's end effector by optimizing the sequence and timing of
+        manipulator&apos;s end effector by optimizing the sequence and timing of
         joint movements.
       </p>
       <p>
         The inverse kinematics model is established using the Denavit-Hartenberg
-        method, which translates the manipulator's initial posture into the
+        method, which translates the manipulator&apos;s initial posture into the
         joint states needed to reach the desired end effector position.
       </p>
       <h2>4.1 Trajectory Planning</h2>
@@ -22,7 +22,7 @@ const GeneticAlgo = () => {
         each joint variable. This interpolation ensures smooth transitions by
         maintaining continuity in position, velocity, and acceleration, which
         reduces mechanical stress and ensures efficient movement. The end
-        effector's path is computed using the positive kinematic model based on
+        effector&apos;s path is computed using the positive kinematic model based on
         the given starting conditions.
       </p>
       <h2>4.2 Genetic Algorithm Components</h2>
@@ -64,7 +64,7 @@ end Function
       <ul>
         <li>Calculate the fitness of each individual.</li>
         <li>
-          The fitness value is based on the distance L of the end effector's
+          The fitness value is based on the distance L of the end effector&apos;s
           movement, where smaller distances are preferred.
         </li>
         <li>Convert binary strings to decimal to determine tm1 and tm2.</li>
