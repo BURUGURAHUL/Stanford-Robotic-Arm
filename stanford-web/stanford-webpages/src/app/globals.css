@@ -54,9 +54,6 @@ th {
   color: #4b5563; /* Tailwind gray-600 */
 }
 
-tr:hover {
-  background-color: #48C063; /* Tailwind gray-100 */
-}
 
 tbody tr:last-child td {
   border-bottom: 0;
