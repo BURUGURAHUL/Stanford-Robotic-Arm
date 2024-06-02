@@ -61,3 +61,20 @@ tr:hover {
 tbody tr:last-child td {
   border-bottom: 0;
 }
+
+pre {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #48C063;
+  color: hsl(0, 0%, 40%);
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 0.5em 1em;
+  display: block;
+  word-wrap: break-word;
+}

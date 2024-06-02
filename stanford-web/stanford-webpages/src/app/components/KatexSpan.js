@@ -17,9 +17,9 @@ const KatexSpan = ({ text, ...delegated }) => {
         }
       }, [text]);
     return (
-        <div ref={katexTextRef} {...delegated}>
+        <p ref={katexTextRef} {...delegated}>
           {text}
-        </div>
+        </p>
       );
 }
 
