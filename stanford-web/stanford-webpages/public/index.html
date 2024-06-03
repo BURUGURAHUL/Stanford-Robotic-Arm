@@ -90,37 +90,39 @@
       ReactDOM.render(<Navbar />, document.getElementById('navbar'));
     </script>
 
-    
-
-   
-
     <main>
       <div id="navbar"></div>
-      <div id="simulation-frame" style="padding:30px;" >
-        <h1>Stanford Manipulator Simulation</h1>
-        <div id="container3D"></div>
-      </div>
-      <div className="frame">
-        <div className="slidecontainer">
-          <label htmlFor="myRange_J1" className="slider-label">Joint-1 theta - <span id="valueDisplay_J1">0</span><sup>o</sup></label>
-          <input type="range" min="-180" max="180" className="slider" id="myRange_J1" />
-
-          <label htmlFor="myRange_J2_Plane003" className="slider-label">Joint-2 theta - <span id="valueDisplay_J2">0</span><sup>o</sup></label>
-          <input type="range" min="-45" max="45" className="slider" id="myRange_J2_Plane003" />
-
-          <label htmlFor="myRange_J3_Cube" className="slider-label">Joint-3 Prismatic - <span id="valueDisplay_J3">0</span><sup>o</sup></label>
-          <input type="range" min="-2" max="3" className="slider" id="myRange_J3_Cube" />
-
-          <label htmlFor="myRange_J4" className="slider-label">Joint-4 theta - <span id="valueDisplay_J4">0</span><sup>o</sup></label>
-          <input type="range" min="-45" max="45" className="slider" id="myRange_J4" />
-
-          <label htmlFor="myRange_J5" className="slider-label">Joint-5 theta - <span id="valueDisplay_J5">0</span><sup>o</sup></label>
-          <input type="range" min="10" max="180" className="slider" id="myRange_J5" />
-
-          <label htmlFor="myRange_J6" className="slider-label">Joint-6 theta - <span id="valueDisplay_J6">0</span><sup>o</sup></label>
-          <input type="range" min="-90" max="90" className="slider" id="myRange_J6" />
+      <div class="flex">
+        <div id="simulation-frame" style="padding:30px;" >
+          
+          <div id="container3D"></div>
+        </div>
+        <div class="frame">
+          <h1 >Stanford Manipulator Simulation</h1>
+          <div class="slidecontainer">
+            <label htmlFor="myRange_J1" class="slider-label">Joint-1 theta - <span id="valueDisplay_J1">0</span><sup>o</sup></label>
+            <input type="range" min="-180" max="180" class="slider" id="myRange_J1" />
+  
+            <label htmlFor="myRange_J2_Plane003" class="slider-label">Joint-2 theta - <span id="valueDisplay_J2">0</span><sup>o</sup></label>
+            <input type="range" min="-45" max="45" class="slider" id="myRange_J2_Plane003" />
+  
+            <label htmlFor="myRange_J3_Cube" class="slider-label">Joint-3 Prismatic - <span id="valueDisplay_J3">0</span><sup>o</sup></label>
+            <input type="range" min="-2" max="3" class="slider" id="myRange_J3_Cube" />
+  
+            <label htmlFor="myRange_J4" class="slider-label">Joint-4 theta - <span id="valueDisplay_J4">0</span><sup>o</sup></label>
+            <input type="range" min="-45" max="45" class="slider" id="myRange_J4" />
+  
+            <label htmlFor="myRange_J5" class="slider-label">Joint-5 theta - <span id="valueDisplay_J5">0</span><sup>o</sup></label>
+            <input type="range" min="10" max="180" class="slider" id="myRange_J5" />
+  
+            <label htmlFor="myRange_J6" class="slider-label">Joint-6 theta - <span id="valueDisplay_J6">0</span><sup>o</sup></label>
+            <input type="range" min="-90" max="90" class="slider" id="myRange_J6" />
+          </div>
+          <div id="transformationMatrix" class="matrix"></div>
         </div>
       </div>
+      
+      
     </main>
     <script type="module" src="js/main.js"></script>
   </body>

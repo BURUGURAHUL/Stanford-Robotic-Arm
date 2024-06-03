@@ -45,6 +45,94 @@ const val5 = document.getElementById('valueDisplay_J5');
 const var6 = document.getElementById('myRange_J6');
 const val6 = document.getElementById('valueDisplay_J6');
 
+// Transformation matrix display
+const transformationMatrixDisplay = document.getElementById('transformationMatrix');
+
+// Function to update the transformation matrix display
+const updateMatrixDisplay = (matrix) => {
+  const elements = matrix.elements;
+  const transposedElements = [
+    elements[0], elements[4], elements[8], elements[12],
+    elements[1], elements[5], elements[9], elements[13],
+    elements[2], elements[6], elements[10], elements[14],
+    elements[3], elements[7], elements[11], elements[15]
+  ];
+
+  const endEffectorPosition = {
+    x: transposedElements[3].toFixed(2),
+    y: transposedElements[7].toFixed(2),
+    z: transposedElements[11].toFixed(2),
+  };
+
+  const matrixHTML = `
+    <table class="matrix-table">
+      <tr>
+        <td>${transposedElements[0].toFixed(2)}</td>
+        <td>${transposedElements[1].toFixed(2)}</td>
+        <td>${transposedElements[2].toFixed(2)}</td>
+        <td>${transposedElements[3].toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td>${transposedElements[4].toFixed(2)}</td>
+        <td>${transposedElements[5].toFixed(2)}</td>
+        <td>${transposedElements[6].toFixed(2)}</td>
+        <td>${transposedElements[7].toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td>${transposedElements[8].toFixed(2)}</td>
+        <td>${transposedElements[9].toFixed(2)}</td>
+        <td>${transposedElements[10].toFixed(2)}</td>
+        <td>${transposedElements[11].toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td>${transposedElements[12].toFixed(2)}</td>
+        <td>${transposedElements[13].toFixed(2)}</td>
+        <td>${transposedElements[14].toFixed(2)}</td>
+        <td>${transposedElements[15].toFixed(2)}</td>
+      </tr>
+    </table>
+    <p>End Effector Position: (${endEffectorPosition.x}, ${endEffectorPosition.y}, ${endEffectorPosition.z})</p>
+  `;
+  transformationMatrixDisplay.innerHTML = matrixHTML;
+};
+
+const updateDHParameters = () => {
+      const theta1 = parseFloat(var1.value) * (Math.PI / 180);
+      const theta2 = parseFloat(var2.value) * (Math.PI / 180);
+      const d3 = parseFloat(var3.value) ;
+      const theta4 = parseFloat(var4.value) * (Math.PI / 180);
+      const theta5 = parseFloat(var5.value) * (Math.PI / 180);
+      const theta6 = parseFloat(var6.value) * (Math.PI / 180);
+
+      const DHTable = [
+        { theta: theta1 , d: 0.412, a: 0, alpha: -Math.PI / 2 },
+        { theta: theta2 , d: 0.154, a: 0, alpha: Math.PI/2 },
+        { theta: -Math.PI/2, d: d3, a: 0.023, alpha: 0 },
+        { theta: theta4, d: 0, a: 0, alpha: -Math.PI / 2 },
+        { theta: theta5, d: 0, a: 0, alpha: Math.PI / 2 },
+        { theta: theta6, d: 0, a: 0, alpha:0 },
+      ];
+
+      const transformationMatrix = (theta, d, a, alpha) => {
+        return new THREE.Matrix4().set(
+          Math.cos(theta), -Math.sin(theta) , Math.sin(theta) * Math.sin(alpha), a * Math.cos(theta),
+          Math.sin(theta), Math.cos(theta) , -Math.cos(theta) * Math.sin(alpha), a * Math.sin(theta),
+          0, Math.sin(alpha), Math.cos(alpha), d,
+          0, 0, 0, 1
+        );
+      };
+
+      let T = new THREE.Matrix4();
+      T.identity();
+
+      DHTable.forEach(({ theta, d, a, alpha }) => {
+        const A = transformationMatrix(theta, d, a, alpha);
+        T.multiply(A);
+      });
+
+      updateMatrixDisplay(T);
+    }; 
+
 //Load the file
 loader.load(
   `models/${objToRender}/stanford.gltf`,
@@ -63,6 +151,7 @@ loader.load(
       let value = event.target.value;
       obj1.rotation.y = value*(22/7)/180; // Adjust as needed
       val1.textContent = value;
+      updateDHParameters();
     });
 
     let obj2 = gltf.scene.getObjectByName("Cylinder001");
@@ -70,6 +159,7 @@ loader.load(
       let value = event.target.value;
       obj2.rotation.y = value*(22/7)/180; // Adjust as needed
       val2.textContent = value;
+      updateDHParameters();
     });
 
     let obj3 = gltf.scene.getObjectByName("Cube");
@@ -77,6 +167,7 @@ loader.load(
       let value = event.target.value;
       obj3.position.x = value; // Adjust as needed
       val3.textContent = value;
+      updateDHParameters();
     });
 
     let obj4 = gltf.scene.getObjectByName("Circle001");
@@ -84,6 +175,7 @@ loader.load(
       let value = event.target.value;
       obj4.rotation.x = value*(22/7)/180; // Adjust as needed
       val4.textContent = value;
+      updateDHParameters();
     });
 
     let obj5 = gltf.scene.getObjectByName("Plane");
@@ -91,6 +183,7 @@ loader.load(
       let value = event.target.value;
       obj5.rotation.z = value*(22/7)/180; // Adjust as needed
       val5.textContent = value;
+      updateDHParameters();
     });
 
     let obj6 = gltf.scene.getObjectByName("Cylinder005");
@@ -98,14 +191,13 @@ loader.load(
       let value = event.target.value;
       obj6.rotation.y = value*(22/7)/180; // Adjust as needed
       val6.textContent = value;
+      updateDHParameters();
     });
 
 
   },
 
  
-
-
   function (xhr) {
     //While it is loading, log the progress
     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
