@@ -66,7 +66,7 @@ To view the simulation in Blender, open the `index.html` file in the `stanford-s
 
 ### Web Visualization
 
-To access the web visualization, navigate to the `stanford-web` directory and open the `index.html` file.
+To access the web visualization, navigate to the `stanford-web/stanford-webpages` directory, and run `npm install` and `npm run dev` on the terminal.
 
 ## 🖼️ MATLAB Simulation GIFs
 
