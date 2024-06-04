@@ -51,8 +51,8 @@ This directory contains web-related files to visualize and interact with the Sta
 - `package-lock.json` - Dependency lock file.
 - `package.json` - Node.js package file.
 
-### /Stanfordfinal.ipynb
-Jupyter Notebook with the final implementation and analysis of the Stanford manipulator.
+### /stanford-rbtoolbox.ipynb
+Jupyter Notebook with the implementation and analysis of the Stanford manipulator using Robotics Toolbox on Python.
 
 ## 🛠️ Usage
 
@@ -66,7 +66,7 @@ To view the simulation in Blender, open the `index.html` file in the `stanford-s
 
 ### Web Visualization
 
-To access the web visualization, navigate to the `stanford-web` directory and open the `index.html` file.
+To access the web visualization, navigate to the `stanford-web/stanford-webpages` directory, and run `npm install` and `npm run dev` on the terminal.
 
 ## 🖼️ MATLAB Simulation GIFs
 
