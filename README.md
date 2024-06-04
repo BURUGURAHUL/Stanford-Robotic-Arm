@@ -51,8 +51,8 @@ This directory contains web-related files to visualize and interact with the Sta
 - `package-lock.json` - Dependency lock file.
 - `package.json` - Node.js package file.
 
-### /Stanfordfinal.ipynb
-Jupyter Notebook with the final implementation and analysis of the Stanford manipulator.
+### /stanford-rbtoolbox.ipynb
+Jupyter Notebook with the implementation and analysis of the Stanford manipulator using Robotics Toolbox on Python.
 
 ## 🛠️ Usage
 
