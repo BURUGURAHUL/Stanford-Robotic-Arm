@@ -102,31 +102,12 @@ end Function
       <pre classname="python-code">
         <code>
           {`
-Function fitness(pop_size, chromo_size)
-Input: 
-    int pop_size; 
-    int chromo_size; 
-    int array[2] pop(pop_size, chromo_size); 
-    double array t2(pop_size); 
-    double array t3(pop_size); 
-    double array fitness_value(pop_size); 
-Output: 
-    for i = 1 to pop_size 
-        for j = 1 to chromo_size 
-            if pop(i, j) == 1 
-                t2(i) = t2(i) + 2^(chromo_size - j); 
-            end if 
-        end for 
-        for j = chromo_size + 1 to 2 × chromo_size 
-            if pop(i, j) == 1 
-                t3(i) = t3(i) + 2^(2 × chromo_size - j); 
-            end if 
-        end for 
-        t2(i) = t2(i) / (2^chromo_size); 
-        t3(i) = t3(i) / (2^chromo_size); 
-        fitness_value(i) = L(t2(i), t3(i)); 
-    end for 
-end Function
+function score = fitness(individual, chromo_size, theta_10, theta_1f, theta_20, theta_2f, d_30, d_3f, tf)
+    
+bits = individual;
+[t2, t3] = decode(bits, chromo_size, tf);
+score = distance(theta_10, theta_1f, theta_20, theta_2f, d_30, d_3f, t2, t3, tf);
+end
           `}
         </code>
       </pre>
