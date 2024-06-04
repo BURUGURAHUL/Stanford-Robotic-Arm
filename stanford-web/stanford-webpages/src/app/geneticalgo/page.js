@@ -1,5 +1,7 @@
 import React from "react";
 import KatexSpan from "../components/KatexSpan";
+import Image from "next/image";
+import ga from "../components/images/gaflow.png";
 
 const GeneticAlgo = () => {
   return (
@@ -16,6 +18,27 @@ const GeneticAlgo = () => {
         method, which translates the manipulator&apos;s initial posture into the
         joint states needed to reach the desired end effector position.
       </p>
+
+      <div className="flex justify-center gap-5 my-5 text-center">
+        <div>
+          <p>Unoptimized Path:</p>
+          <Image src="/unoptimized.gif" width={600} height={600}/>
+        {/* <video width="500" autoPlay loop>
+        <source src="./unoptimized.mp4" type="video/mp4"  />
+        Your browser does not support the video tag.
+      </video> */}
+        </div>
+      <div>
+        <p>Optimized Path:</p>
+        <Image src="/optimized.gif" width={600} height={600}/>
+      {/* <video width="500" autoPlay loop>
+        <source src="./optimized.mp4" type="video/mp4"  />
+        Your browser does not support the video tag.
+      </video> */}
+      </div>
+
+      
+      </div>
       <h2>4.1 Trajectory Planning</h2>
       <p>
         To plan the trajectory, cubic polynomial interpolation is applied to
@@ -26,7 +49,7 @@ const GeneticAlgo = () => {
         the given starting conditions.
       </p>
       <h2>4.2 Genetic Algorithm Components</h2>
-
+      <Image src={ga} width={500} className="mx-auto"/>
       <p>
         <b>Initialization:</b>
       </p>
@@ -178,6 +201,8 @@ end Function
         target position. These formulas represent the Euclidean distance covered
         by the end effector in each segment of its movement.
       </p>
+
+      
     </div>
   );
 };

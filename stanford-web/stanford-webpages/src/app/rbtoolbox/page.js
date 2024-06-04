@@ -1,8 +1,10 @@
 import React from "react";
 import KatexSpan from "../components/KatexSpan";
+import Image from "next/image";
+import sdh from "../components/images/sdh.png";
 
 const rbtoolbox = () => {
-  const matrix1 = `$$ \\left[\\begin{array} {rrrr} nx & ny & nz & 0 \\\\ ox & oy & oz & 0 \\\\ ax & ay & az & 0 \\\\ px & py & pz & 1 \\\\ \\end{array}\\right] $$`;
+  const matrix1 = `$$ \\left[\\begin{array} {rrrr} nx & ox & ax & px \\\\ ny & oy & ay & py \\\\ nz & oz & az & pz \\\\ 0 & 0 & 0 & 1 \\\\ \\end{array}\\right] $$`;
   const matrix2 = `$$ \\left[\\begin{array} {rrrr}
     \\cos \\theta_n & -\\sin \\theta_n & 0 & a_n \\\\
     \\sin \\theta_n \\cos \\alpha_n & \\cos \\theta_n \\cos \\alpha_n & -\\sin \\alpha_n & -d_n \\sin \\alpha_n \\\\
@@ -75,55 +77,9 @@ $$`}
       />
       <KatexSpan text={matrix2} />
       <KatexSpan text={matrix3} />
-      <p>Link motion parameters:</p>
-      <table className="dhtable">
-        <thead>
-          <tr>
-            <th>Joint Number</th>
-            <th>Joint Parameter</th>
-            <th>Tortional Angle (α)</th>
-            <th>Offset</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>θ1</td>
-            <td>-90</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>θ2</td>
-            <td>90</td>
-            <td>d2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>θ3</td>
-            <td>0</td>
-            <td>d3</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>θ4</td>
-            <td>-90</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>θ5</td>
-            <td>90</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>θ6</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>Standard DH Parameters:</p>
+      <Image src={sdh} width={700}/>
+      
     </div>
   );
 };
