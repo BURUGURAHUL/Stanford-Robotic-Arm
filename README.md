@@ -1,5 +1,5 @@
 # 🤖 Stanford Robotic Manipulator
-Welcome to the Stanford Robotic Manipulator project! This repository contains various files and directories to simulate, optimize, and visualize the Stanford robotic manipulator using MATLAB, Blender, and web technologies.
+Welcome to the Stanford Robotic Manipulator project! This repository contains various files and directories to simulate, optimize, and visualize the Stanford robotic manipulator using MATLAB, Blender, and web technologies!
 
 ## Tech Stack
 [![tech Stack](https://skillicons.dev/icons?i=matlab,python,nextjs,js,tailwindcss,blender,threejs,figma,vercel)](https://skillicons.dev)
