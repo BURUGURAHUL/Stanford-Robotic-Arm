@@ -14,30 +14,35 @@ const GeneticAlgo = () => {
         joint movements.
       </p>
       <p>
-        The inverse kinematics model is established using the Denavit-Hartenberg
-        method, which translates the manipulator&apos;s initial posture into the
-        joint states needed to reach the desired end effector position.
+      According to the initial posture matrix, the inverse 
+kinematics model established by Denavit-Hartenberg method is used to find the initial state of each 
+joint. In accordance with the given beginning moment, 
+cubic polynomial interpolation is applied to each joint 
+variable and the positive kinematic model is used to 
+calculate the end effector path. Genetic algorithm is then 
+used to optimize the sequential order of each joint and the 
+time difference between different starting time of joints, 
+with an objective function of minimizing the path of end 
+effector.
       </p>
 
-      <div className="flex justify-center gap-5 my-5 text-center">
+      <div className="flex justify-center gap-5 my-5 text-center sm:flex-wrap lg:flex-nowrap flex-1">
         <div>
           <p>Unoptimized Path:</p>
-          <Image src="/unoptimized.gif" width={600} height={600}/>
-        {/* <video width="500" autoPlay loop>
+          <Image src="/unoptimized.gif" width={600} height={600} />
+          {/* <video width="500" autoPlay loop>
         <source src="./unoptimized.mp4" type="video/mp4"  />
         Your browser does not support the video tag.
       </video> */}
         </div>
-      <div>
-        <p>Optimized Path:</p>
-        <Image src="/optimized.gif" width={600} height={600}/>
-      {/* <video width="500" autoPlay loop>
+        <div>
+          <p>Optimized Path:</p>
+          <Image src="/optimized.gif" width={600} height={600} />
+          {/* <video width="500" autoPlay loop>
         <source src="./optimized.mp4" type="video/mp4"  />
         Your browser does not support the video tag.
       </video> */}
-      </div>
-
-      
+        </div>
       </div>
       <h2>4.1 Trajectory Planning</h2>
       <p>
@@ -45,11 +50,11 @@ const GeneticAlgo = () => {
         each joint variable. This interpolation ensures smooth transitions by
         maintaining continuity in position, velocity, and acceleration, which
         reduces mechanical stress and ensures efficient movement. The end
-        effector&apos;s path is computed using the positive kinematic model based on
-        the given starting conditions.
+        effector&apos;s path is computed using the positive kinematic model
+        based on the given starting conditions.
       </p>
       <h2>4.2 Genetic Algorithm Components</h2>
-      <Image src={ga} width={500} className="mx-auto"/>
+      <Image src={ga} width={500} className="mx-auto" />
       <p>
         <b>Initialization:</b>
       </p>
@@ -87,8 +92,8 @@ end Function
       <ul>
         <li>Calculate the fitness of each individual.</li>
         <li>
-          The fitness value is based on the distance L of the end effector&apos;s
-          movement, where smaller distances are preferred.
+          The fitness value is based on the distance L of the end
+          effector&apos;s movement, where smaller distances are preferred.
         </li>
         <li>Convert binary strings to decimal to determine tm1 and tm2.</li>
       </ul>
@@ -119,7 +124,7 @@ Output:
         end for 
         t2(i) = t2(i) / (2^chromo_size); 
         t3(i) = t3(i) / (2^chromo_size); 
-        fitness_value(i) = 1 / L(t2(i), t3(i)); 
+        fitness_value(i) = L(t2(i), t3(i)); 
     end for 
 end Function
           `}
@@ -198,11 +203,9 @@ end Function
           text={String.raw`$$L = \int_{t_3}^{t_f} (\dot{x}(t))^2 + (\dot{y}(t))^2 + (\dot{z}(t))^2 \, dt$$`}
         />
         Where t<sub>f</sub> is the final time when the end effector reaches the
-        target position. These formulas represent the Euclidean distance covered
+        target position. These formulas represent the distance covered
         by the end effector in each segment of its movement.
       </p>
-
-      
     </div>
   );
 };
