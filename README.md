@@ -4,6 +4,16 @@ Welcome to the Stanford Robotic Manipulator project! This repository contains va
 ## Tech Stack
 [![tech Stack](https://skillicons.dev/icons?i=matlab,python,nextjs,js,tailwindcss,blender,threejs,figma,vercel)](https://skillicons.dev)
 
+## Contributors 🤝
+<table style="border: none;">
+<tr>
+<td align="center" width="200"><pre><a href="https://github.com/Manasha-1204Manasha-1204"><img src="https://avatars.githubusercontent.com/u/121673101?v=4" width="200" alt="Profile" /><br><sub>@Manasha-1204</sub></a></pre></td>
+<td align="center" width="200"><pre><a href="https://github.com/amri-tah"><img src="https://avatars.githubusercontent.com/u/111682039?v=4" width="200" alt="Profile" /><br><sub>@amri-tah</sub></a></pre></td>
+<td align="center" width="200"><pre><a href="https://github.com/sudheerkumarchowdary"><img src="https://avatars.githubusercontent.com/u/98307666?v=4" width="200" alt="Profile" /><br><sub>@sudheerkumarchowdary</sub></a>
+<td align="center" width="200"><pre><a href="https://github.com/BURUGURAHUL"><img src="https://avatars.githubusercontent.com/u/121683096?v=4" width="200" alt="Profile" /><br><sub>@BURUGURAHUL</sub></a></pre></td>
+</tr>
+</table>
+
 ## 📂 Directory Structure
 
 ### /stanford-ga-matlab/
@@ -54,6 +64,17 @@ This directory contains web-related files to visualize and interact with the Sta
 ### /stanford-rbtoolbox.ipynb
 Jupyter Notebook with the implementation and analysis of the Stanford manipulator using Robotics Toolbox on Python.
 
+## 🖼️ MATLAB Simulation 
+1. **Unoptimised path**
+
+![unoptimized](https://github.com/BURUGURAHUL/Stanford-Robotic-Arm/assets/111682039/ee8e50de-39b6-4fbb-99df-073c89cceeaf)
+
+2. **Optimised path**
+
+![optimized](https://github.com/BURUGURAHUL/Stanford-Robotic-Arm/assets/111682039/87e5b612-7c55-466e-9609-04e83b0c35ae)
+
+## ✅ Screenshots 
+
 ## 🛠️ Usage
 
 ### MATLAB Simulation
@@ -68,22 +89,6 @@ To view the simulation in Blender, open the `index.html` file in the `stanford-s
 
 To access the web visualization, navigate to the `stanford-web/stanford-webpages` directory, and run `npm install` and `npm run dev` on the terminal.
 
-## 🖼️ MATLAB Simulation GIFs
-
-Below are two places where you can view GIFs of the MATLAB simulation:
-
-1. **Unoptimised path**
-2. **Optimised path**
-
-## Contributors 🤝
-<table style="border: none;">
-<tr>
-<td align="center" width="200"><pre><a href="https://github.com/Manasha-1204Manasha-1204"><img src="https://avatars.githubusercontent.com/u/121673101?v=4" width="200" alt="Profile" /><br><sub>@Manasha-1204</sub></a></pre></td>
-<td align="center" width="200"><pre><a href="https://github.com/amri-tah"><img src="https://avatars.githubusercontent.com/u/111682039?v=4" width="200" alt="Profile" /><br><sub>@amri-tah</sub></a></pre></td>
-<td align="center" width="200"><pre><a href="https://github.com/sudheerkumarchowdary"><img src="https://avatars.githubusercontent.com/u/98307666?v=4" width="200" alt="Profile" /><br><sub>@sudheerkumarchowdary</sub></a>
-<td align="center" width="200"><pre><a href="https://github.com/BURUGURAHUL"><img src="https://avatars.githubusercontent.com/u/121683096?v=4" width="200" alt="Profile" /><br><sub>@BURUGURAHUL</sub></a></pre></td>
-</tr>
-</table>
 
   
 ## 📜 License
